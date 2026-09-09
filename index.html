@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voice Assistant — a drop-in mic for any website</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="wrap">
+    <span class="brand">◆ Voice Assistant</span>
+    <div class="links">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#code">Get it</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">A drop-in widget, no server required</p>
+    <h1>Give your website<br>a voice.</h1>
+    <p class="lede">One script tag adds a floating mic button that listens, understands
+      simple commands, and talks back — built on the browser's own speech engine.</p>
+    <div class="hero-cta">
+      <span class="pointer">↘</span>
+      <p>Click the mic in the corner and say <em>"help"</em> to try it right now.</p>
+    </div>
+  </div>
+</header>
+
+<section id="features" class="features">
+  <div class="wrap">
+    <h2>Why it's different</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="num">01</span>
+        <h3>Zero dependencies</h3>
+        <p>No npm install, no build step, no external API keys. One JavaScript file, plain browser APIs.</p>
+      </div>
+      <div class="card">
+        <span class="num">02</span>
+        <h3>Understands your site</h3>
+        <p>"Go to pricing" finds the matching section automatically by id, heading, or nav link — no manual mapping needed.</p>
+      </div>
+      <div class="card">
+        <span class="num">03</span>
+        <h3>Commands you control</h3>
+        <p>Add your own voice commands in a plain array — a few lines of JavaScript, no special syntax to learn.</p>
+      </div>
+      <div class="card">
+        <span class="num">04</span>
+        <h3>Free, forever</h3>
+        <p>Runs entirely in the visitor's browser. Nothing to host, nothing to pay for, nothing phoning home.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li>
+        <span class="step-num">1</span>
+        <div>
+          <h3>Drop in the script</h3>
+          <p>Add <code>&lt;script src="voice-assistant.js"&gt;&lt;/script&gt;</code> before your closing <code>&lt;/body&gt;</code> tag.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-num">2</span>
+        <div>
+          <h3>Visitor clicks the mic</h3>
+          <p>A floating button appears automatically. Clicking it asks for microphone permission, once, in-browser.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-num">3</span>
+        <div>
+          <h3>It listens and responds</h3>
+          <p>Speech is matched against your command list and answered out loud using the browser's built-in voice.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="code" class="code-section">
+  <div class="wrap">
+    <h2>Get it</h2>
+    <p class="lede">Copy the file, add the tag. That's the whole setup.</p>
+    <pre><code>&lt;script src="voice-assistant.js"&gt;&lt;/script&gt;</code></pre>
+    <p class="fine-print">Works in Chrome, Edge, and Safari. Requires HTTPS or localhost, since browsers
+      block microphone access on plain HTTP.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Built with the Web Speech API. No tracking, no server, no cost.</p>
+  </div>
+</footer>
+
+<script src="js/voice-assistant.js"></script>
+</body>
+</html>
